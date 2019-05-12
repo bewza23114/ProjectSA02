@@ -4,7 +4,7 @@ $(function () {
         console.log(data);
         console.log(status);
         if (status == 'success') {
-            var products = data.data;
+            var products = data;
             var product = products[document.cookie];
 
             var id = product.customerID;

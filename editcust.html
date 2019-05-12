@@ -47,7 +47,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="dashboard.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-chart-bar"></i>
                     <span>Dashboard</span></a>
             </li>
             <!-- Divider -->
@@ -158,7 +158,7 @@
 
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h3 class="m-0 font-weight-bold text-primary">Edit Customer</h3>
+                            <h3 class="m-0 font-weight-bold text-secondary">Edit Customer</h3>
                             <div class="dropdown no-arrow">
                                 <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -179,26 +179,30 @@
                                 <div class="form-group row">
                                     <div class="col-sm-6">
                                         <label>ID</label>
-                                        <input type="text" class="form-control form-control-user" id="id">
+                                        <input type="text" required class="form-control form-control-user" id="id"
+                                            pattern="[A-Z]{5}">
                                     </div>
                                     <div class="col-sm-6">
                                         <label>Name</label>
-                                        <input type="text" class="form-control form-control-user" id="name">
+                                        <input type="text" required class="form-control form-control-user" id="name"
+                                            pattern="[A-Z][a-zA-Z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s- _.]{1,50}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6">
                                         <label>Contact Name</label>
-                                        <input type="text" class="form-control form-control-user" id="contactName">
+                                        <input type="text" required class="form-control form-control-user"
+                                            id="contactName" pattern="[A-Z][a-zA-Z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s- _.]{1,50}">
                                     </div>
                                     <div class="col-sm-6">
                                         <label>Contact Title</label>
-                                        <input type="text" class="form-control form-control-user" id="contactTitle">
+                                        <input type="text" required class="form-control form-control-user"
+                                            id="contactTitle" pattern="[a-zA-Z0-9- ]{1,50}">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Address</label>
-                                    <input type="text" class="form-control form-control-user" id="address">
+                                    <input type="text" required class="form-control form-control-user" id="address" pattern="[A-Z][a-zA-Z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s- _.]{1,100}">
                                 </div>
                                 <div>
                                     <center><input type="submit" class="btn btn-primary btn-user btn-lg" value="Edit">
@@ -255,6 +259,9 @@
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
